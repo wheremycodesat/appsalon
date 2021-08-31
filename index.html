@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" theme="light-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Salón de Belleza</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <div class="contenedor-estetica">
+      <div class="imagen"></div>
+      <div class="app">
+        <header class="header">
+          <h1 id="heading">App Peluquería</h1>
+          <!-- dark mode toggle -->
+          <div class="options">
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+
+            <div class="dropdown">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-world"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="12" cy="12" r="9" />
+                <line x1="3.6" y1="9" x2="20.4" y2="9" />
+                <line x1="3.6" y1="15" x2="20.4" y2="15" />
+                <path d="M11.5 3a17 17 0 0 0 0 18" />
+                <path d="M12.5 3a17 17 0 0 1 0 18" />
+              </svg>
+
+              <div class="languages">
+                <a class="reload" id="espanol" href="#es">Español</a>
+                <a class="reload" id="ingles" href="#eng">Inglés</a>
+                <a class="reload" id="frances" href="#fr">Francés</a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <nav class="tabs">
+          <button id="servicios" type="button" data-paso="1">Servicios</button>
+          <button id="infocliente" type="button" data-paso="2">
+            Información Cliente
+          </button>
+          <button id="resumen" type="button" data-paso="3">Resumen</button>
+        </nav>
+        <!-- .tabs -->
+
+        <!-- Comienza contenido app -->
+        <div id="paso-1" class="seccion">
+          <h2 id="servicios">Servicios</h2>
+          <p id="elegirservicios" class="text-center">
+            Elige tus servicios a continuación
+          </p>
+          <div class="listado-servicios"></div>
+        </div>
+        <div id="paso-2" class="seccion">
+          <h2 id="tusdatosycita">Tus Datos y Cita</h2>
+          <p id="colocadatos" class="text-center">
+            Coloca tus datos y fecha de tu cita
+          </p>
+          <form class="formulario">
+            <div class="campo">
+              <label id="nombretexto" for="nombre">Nombre</label>
+              <input type="text" id="nombre" placeholder="Tu nombre" />
+            </div>
+            <div class="campo">
+              <label id="fechatexto" for="fecha">Fecha</label>
+              <input type="date" id="fecha" />
+            </div>
+            <div class="campo">
+              <label id="horatexto" for="hora">Hora</label>
+              <input type="time" id="hora" />
+            </div>
+          </form>
+        </div>
+        <div id="paso-3" class="seccion contenido-resumen">
+          <h2 id="resumen">Resumen</h2>
+        </div>
+
+        <div class="paginacion">
+          <button id="anterior">&lt; <span id="ant">Anterior</span></button>
+          <button id="siguiente"><span id="sig">Siguiente</span> &gt;</button>
+        </div>
+      </div>
+      <!-- .app -->
+    </div>
+    <!-- .contenedor-estetica -->
+
+    <script src="build/js/bundle.min.js"></script>
+  </body>
+</html>
